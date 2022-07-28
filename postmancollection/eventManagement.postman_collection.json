@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "24bdeaeb-bd4f-4052-8c6b-6199b576feb1",
+		"name": "eventManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n     {\r\n        \"name\":\"suman\" ,\r\n        \"email\":\r\n            \"suman@12345.com\"\r\n        ,\r\n        \"password\":\"1234\",\r\n        \r\n        \"phone\":1243\r\n        } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"suman@1234.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createEvent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"userId\":\"62e21ae48f456061dca33e3c\",\r\n    \"name\":\"abcd\",\r\n    \"place\":\"dgdgdyjh\",\r\n    \"date\":\"hfhvhfhvjhk\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createEvent",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createEvent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"zccxn\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updatePassword",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getevents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/getEvents?name&date&userId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getEvents"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null
+						},
+						{
+							"key": "date",
+							"value": null
+						},
+						{
+							"key": "userId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEvent",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Do-Not-Track",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"\",\r\n    \"place\":\"\",\r\n    \"date\":\"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updateEvent",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateEvent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEvent",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/deleteeventById",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteeventById"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
